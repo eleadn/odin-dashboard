@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Roboto', 'Times New Roman', Times, serif;
+    
 }
 
 :root
@@ -14,6 +15,7 @@
     --main-font-color: white;
     --secondary-color: #FFCDD2;
     --ternary-color: #FAFAFA;
+    --ternary-color-active: #E1E1E1;
 }
 
 body
@@ -29,6 +31,9 @@ body
     box-shadow: 0 0 10px grey;
     z-index: 1;
     background-color: var(--ternary-color);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 3fr;
 }
 
 .content
@@ -82,8 +87,132 @@ body
     align-items: center;
 }
 
-.sidebar-element img
+.search-bar
 {
-    width: 30px;
-    height: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar img, .welcome-msg img
+{
+    margin-left: 50px;
+}
+
+.search-bar input
+{
+    width: 80%;
+    border-radius: 20px;
+    padding: 5px 15px;
+    border: none;
+    background-color: var(--secondary-color);
+}
+
+.welcome-msg
+{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.welcome-header
+{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.welcome-user
+{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.user-menu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.user-menu button
+{
+    padding: 5px;
+    background-color: var(--ternary-color);
+    border: none;
+}
+
+.user-menu button:active
+{
+    background-color: var(--ternary-color-active);
+}
+
+.notification-button
+{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
+
+.profile-button
+{
+    border-radius: 30px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.actions
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.actions button
+{
+    font-size: 18px;
+    background-color: var(--main-color);
+    color: var(--main-font-color);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+
+.actions button:active
+{
+    background-color: var(--main-color-active);
+}
+
+.profile-button div
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sidebar-element div
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar-element img, .search-bar img, .notification-button img
+{
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.profile-button img
+{
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.welcome-msg img
+{
+    max-width: 50px;
+    max-height: 50px;
 }
