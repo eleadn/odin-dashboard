@@ -1,0 +1,33 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.header
+{
+    box-shadow: 0 0 10px grey;
+    z-index: 1;
+    background-color: #FAFAFA;
+}
+
+.content
+{
+    background-color: #FFCDD2;
+}
+
+.sidebar
+{
+    z-index: 2;
+    background-color: #C62828;
+    grid-row: 1 / 3;
+}
