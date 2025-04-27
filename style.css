@@ -39,6 +39,148 @@ body
 .content
 {
     background-color: var(--secondary-color);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.projects, .announcements, .trending
+{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement h4
+{
+    margin-bottom: 5px;
+}
+
+.announcement div
+{
+    font-size: 13px;
+}
+
+.announcement:nth-child(n + 2)
+{
+    border-top: 1px solid black;
+}
+
+.announcement
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.announcement-container
+{
+    box-sizing: border-box;
+    padding: 0 20px;
+    flex: 1;
+    background-color: var(--ternary-color);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px grey;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.trending-container
+{
+    box-sizing: border-box;
+    padding: 0 20px;
+    flex: 1;
+    background-color: var(--ternary-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.trending-user-desc
+{
+    color: grey;
+}
+
+.trending-user
+{
+    display: flex;
+    gap: 20px;
+}
+
+.trending-user img
+{
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.projects
+{
+    grid-row: 1 / 3;
+}
+
+.project-container
+{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project
+{
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-left: 10px solid orange;
+    border-radius: 10px;
+    background-color: var(--ternary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    box-shadow: 5px 5px 10px grey;
+}
+
+.project-title
+{
+    margin-bottom: 5px;
+}
+
+.project-content
+{
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.project-buttons
+{
+    align-self: flex-end;
+}
+
+.project-button
+{
+    border: none;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    justify-self: end;
+    background-color: var(--ternary-color);
+}
+
+.project-button:active
+{
+    background-color: var(--ternary-color-active);
+}
+
+.project-button img
+{
+    max-width: 20px;
+    max-height: 20px;
 }
 
 .sidebar
@@ -67,6 +209,11 @@ body
 .sidebar .dashboard, .sidebar button img
 {
     margin-left: 25px;
+}
+
+.dashboard, .sidebar button div
+{
+    margin-right: 25px;
 }
 
 .home
